@@ -1,3 +1,2 @@
-# Professional README Generator Starter Code
+# s
 
-[How to create a Professional README](./readme-guide.md)
