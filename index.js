@@ -129,7 +129,7 @@ const questions = [
         type: 'checkbox',
         name: 'license',
         message: "Select a appropriate license for this project: (*)",
-        choices: ['Apache', 'MIT', 'GNU', 'Academic'],default:['Apache'],
+        choices: ['Apache', 'MIT', 'GNU', 'Academic','None']
   
     },
     //ask for github
