@@ -2,6 +2,8 @@
 
   ## Description
   🔍It is my bootcamp challenge to create to a dynamic readme file.
+  
+![Demo](src/demo.gif)
 
   ## Table of Content
   * [Installation](#installation)
