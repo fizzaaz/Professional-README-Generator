@@ -69,7 +69,7 @@ function generateMarkdown(data) {
   ## Contribution
   👪${checkContribute(data.Contribution)}
 
-  ${renderLicenseBadge(data.license)}${renderLicenseSection(data.license)} 
+  ✋${renderLicenseSection(data.license)} 
 
   ## Tests
   ✏️${data.test}
