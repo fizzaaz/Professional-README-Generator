@@ -3,7 +3,7 @@
 function renderLicenseBadge(license) {
   if(license!=='None')
   {
-    return `[![license](https://img.shields.io/badge/license-${data.license}-blue)](https://shields.io)`;
+    return `[![license](https://img.shields.io/badge/license-${license}-blue)](https://shields.io)`;
   }
   return '';
 }
@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
 if(license!=='None')
 {
-  return `\n* [License](##license) \n`
+  return `* [License](##license) `
 }
 return '';
 }
@@ -29,7 +29,22 @@ function renderLicenseSection(license) {
   return '';
 
 }
-
+//check if user wants to enter some
+const checkContribute=data=>{
+  if(data)
+  {
+    return data;
+  }
+  return "No one is allowed to contribute in this project."
+}
+const checkInstallation=data=>{
+  if(data)
+  {
+    return data;
+  }
+  else{
+  console.log("Installation details are not avaliable.")}
+}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title} ${renderLicenseBadge(data.license)}
@@ -38,32 +53,31 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Content
-  * [Installation](##Installation)
+  * [Installation](#Installation)
   * [Usage](#Usage)
-  * [Contribution](##Contribution)
-  * [License](##License)
-  * [Tests](##test)
-  * [Questions](##question)
+  * [Contribution](#Contribution)
+  ${renderLicenseLink(data.license)}
+  * [Tests](#test)
+  * [Questions](#question)
 
-  ### Installation 
-  ${data.install}
+  ## Installation 
+  ${checkInstallation(data.install)}
 
-  ### Usage
+  ## Usage
   ${data.usage}
 
-  ### Contribution
-  ${data.Contribution}
+  ## Contribution
+  ${checkContribute(data.Contribution)}
 
-  ### License
-  ${data.license}
+  ${renderLicenseSection(data.license)} 
 
-  ### Tests
+  ## Tests
   ${data.test}
   
-  ### Questions
+  ## Questions
   If you have any queries feel free to contact me at ${data.email}.
   You can also reach me out through my Github profile at [${data.github}](https://github.com/${data.github}/).
-  `;
+  `
 }
 
 module.exports = generateMarkdown;
