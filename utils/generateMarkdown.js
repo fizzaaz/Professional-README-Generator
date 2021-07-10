@@ -43,40 +43,40 @@ const checkInstallation=data=>{
     return data;
   }
   else{
-  console.log("Installation details are not avaliable.")}
+  return "Installation details are not avaliable."}
 }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title} ${renderLicenseBadge(data.license)}
 
   ## Description
-  ${data.description}
+  🔍${data.description}
 
   ## Table of Content
-  * [Installation](#Installation)
-  * [Usage](#Usage)
-  * [Contribution](#Contribution)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contribution](#contribution)
   ${renderLicenseLink(data.license)}
-  * [Tests](#test)
-  * [Questions](#question)
+  * [Tests](#tests)
+  * [Questions](#questions)
 
   ## Installation 
-  ${checkInstallation(data.install)}
+  💾${checkInstallation(data.install)}
 
   ## Usage
-  ${data.usage}
+  💻${data.usage}
 
   ## Contribution
-  ${checkContribute(data.Contribution)}
+  👪${checkContribute(data.Contribution)}
 
-  ${renderLicenseSection(data.license)} 
+  ${renderLicenseBadge(data.license)}${renderLicenseSection(data.license)} 
 
   ## Tests
-  ${data.test}
+  ✏️${data.test}
   
   ## Questions
-  If you have any queries feel free to contact me at ${data.email}.
-  You can also reach me out through my Github profile at [${data.github}](https://github.com/${data.github}/).
+  If you have any queries feel free to contact me at ✉️ ${data.email}.
+  You can also reach me out through my Github profile at  👋[${data.github}](https://github.com/${data.github}/).
   `
 }
 
